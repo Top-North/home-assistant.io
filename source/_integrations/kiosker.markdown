@@ -13,6 +13,7 @@ ha_platforms:
   - sensor
   - binary_sensor
   - switch
+  - button
 ha_integration_type: integration
 ha_zeroconf: true
 ha_quality_scale: bronze
@@ -68,7 +69,7 @@ The **Kiosker** integration provides the following entities.
 ### Binary sensors
 
 - **Charging state**
-  - Shows whether the device is connected to a charger
+  - Shows whether the device is connected to a charger.
 - **Screensaver state**
   - Shows whether the screensaver is currently active.
 - **Blackout state**
@@ -77,7 +78,32 @@ The **Kiosker** integration provides the following entities.
 ### Switches
 
 - **Disable screensaver**
-  - Disables the currently active screensaver
+  - Disables the currently active screensaver.
+
+### Buttons
+
+- **Ping**
+  - Sends a ping to the device to verify it is reachable. A logbook entry is
+  created when the device responds.
+- **Refresh page**
+  - Reloads the current page displayed on the device.
+- **Go home**
+  - Navigates the device to its configured home URL.
+- **Go forward**
+  - Navigates forward in the browser history.
+- **Go back**
+  - Navigates backward in the browser history.
+- **Print page**
+  - Triggers a print of the current page.
+- **Clear cache**
+  - Clears the browser cache on the device.
+- **Clear cookies**
+  - Clears all cookies on the device.
+- **Dismiss screensaver**
+  - Dismisses the currently active screensaver.
+- **Update**
+  - Triggers an immediate data refresh from the device without waiting for the
+  next poll interval.
 
 ## Data updates
 This integration fetches data from the device every 15 seconds.
